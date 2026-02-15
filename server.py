@@ -99,7 +99,7 @@ def atualizar_filme_parcial(id_filme: int, filme_data: FilmeUpdate, db: Session 
 
 #DELETE
 @app.delete("/filmes/{id_filme}", status_code=status.HTTP_204_NO_CONTENT)
-def deletar_venda(id_filme: int, db: Session = Depends(database.get_db)):
+def deletar_filme(id_filme: int, db: Session = Depends(database.get_db)):
     filme_query = db.query(models.FilmeDB).filter(models.FilmeDB.id == id_filme)
     if not filme_query.first():
         raise HTTPException(status_code=404, detail="Filme não encontrado")
