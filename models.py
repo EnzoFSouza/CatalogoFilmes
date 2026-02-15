@@ -8,5 +8,5 @@ class FilmeDB(Base):
     titulo = Column(String)
     genero = Column(String)
     nota = Column(Integer)
-    classificacao = Column(Integer)
+    classificacao = Column(String)
     onde_assistir = Column(String)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-container">
+    <div class="content-wrapper">
+        <h1 class="main-title">Meus Filmes</h1>
+
+        <div class="card form-card">
+            <h2 class="section-title">Novo Filme</h2>
+            <form id="filmeForm" class="grid-form">
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="genero" placeholder="Gênero" required>
+                <input type="number" id="nota" placeholder="Nota" step="1" required>
+                <input type="text" id="classificacao" placeholder="Classificação" required>
+                <input type="text" id="ondeAssistir" placeholder="Onde Assistir" required>
+                <button type="submit" class="btn-primary">Salvar Filme</button>
+            </form>
+        </div>
+
+        <div class="card table-card">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Gênero</th>
+                        <th>Nota</th>
+                        <th>Classificação</th>
+                        <th>Onde Assistir</th>
+                    </tr>
+                </thead>
+                <tbody id="filmesTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

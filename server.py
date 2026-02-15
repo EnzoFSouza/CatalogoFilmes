@@ -11,7 +11,7 @@ class FilmeSchema(BaseModel):
     titulo: str
     genero: str
     nota: int
-    classificacao: int
+    classificacao: str
     onde_assistir: str
 
     #Permite que pydantic leia dados que vem do SQLAlchemy
@@ -23,7 +23,7 @@ class FilmeUpdate(BaseModel):
     titulo: Optional[str] = None
     genero: Optional[str] = None
     nota: Optional[int] = None
-    classificacao: Optional[int] = None
+    classificacao: Optional[str] = None
     onde_assistir: Optional[str] = None
 
 #Cria as tabelas no banco de dados

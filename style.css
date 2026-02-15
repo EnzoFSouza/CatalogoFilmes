@@ -1,0 +1,116 @@
+/*Variaveis para facilitar manutenção*/
+:root {
+    --primary-blue: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-gray: #f3f4f6;
+    --text-dark: #1f2937;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 2rem;
+}
+
+.content-wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-title{
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+}
+
+/*Estilo dos cards*/
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+/*Grid para o formulário*/
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    width:100%;
+}
+
+.grid-form input {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #d1d5db;
+    padding: 0.6rem;
+    border-radius: 4px;
+    outline-color: var(--primary-blue);
+}
+
+.btn-primary {
+    grid-column: span 5; /* Ocupa as 5 colunas */
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Estilo da Tabela */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table thead {
+    background-color: #f9fafb;
+}
+
+.data-table th, .data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table-card {
+    overflow-x: auto; /* Garante que a tabela não quebre no mobile */
+}
+
+.btn-delete {
+    background-color: #ef4444;
+    border: none;
+    color: var(--bg-gray);
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #b91c1c;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-delete:active {
+    transform: scale(0.95);
+}
